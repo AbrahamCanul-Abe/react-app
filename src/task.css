@@ -1,0 +1,18 @@
+.card {
+	background-color: #03192b;
+	color: antiquewhite;
+	padding: 30px;
+}
+
+.span-card {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.bg-red {
+	background-color: red;
+}
+
+.gb-green {
+	background-color: green;
+}

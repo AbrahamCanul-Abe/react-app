@@ -1,10 +1,13 @@
-export function TaskCard() {
-	const cardStyles = { background: '#202020', color: '#fff', padding: '20px' };
-	const titleStyle = { fontWeight: 'lighter' };
+import './task.css';
+
+export function TaskCard({ ready }) {
 	return (
-		<div style={cardStyles}>
-			<h1 style={titleStyle}>Mi primer Tarea</h1>
-			<p>Tarea Realizada</p>
+		<div className="card">
+			<h1>Mi primer Tarea</h1>
+			<span className={ready ? 'bg-red' : 'bg-green'}>
+				{ready ? 'Tarea realizada' : 'Tarea pendiente'}
+			</span>
+			{/* if ready es true */}
 		</div>
 	);
 }
