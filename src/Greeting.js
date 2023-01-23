@@ -1,5 +1,6 @@
-export function Greeting() {
-	return <h1>Componente de React</h1>;
+export function Greeting({ title, name = 'user' }) {
+	console.log(title, name);
+	return <h1>{title}</h1>;
 }
 
 export function UserCard() {
