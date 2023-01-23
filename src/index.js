@@ -7,8 +7,16 @@ import { TaskCard } from './Task';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const handleChange = (e) => {
+	console.log(e.target.value + '...');
+};
+
 root.render(
 	<>
 		<TaskCard ready={true} />
+
+		<Button text="saludar" />
+
+		<input onChange={handleChange}></input>
 	</>
 );

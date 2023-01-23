@@ -4,7 +4,11 @@ export function Button({ text, name }) {
 	console.log(text);
 
 	return (
-		<button>
+		<button
+			onClick={function () {
+				console.log('hola mundo');
+			}}
+		>
 			{text} - {name}
 		</button>
 	);
