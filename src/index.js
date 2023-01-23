@@ -7,10 +7,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<>
-		<Greeting title="hola Mundo" name="joe" />
-		<Greeting title="hola React" name="ryan" />
-		<Greeting title="hola JS" />
-		<Greeting title="hola JSX" />
-		<Greeting title="hola ABE" />
+		<UserCard
+			name="Ryan Ray"
+			amount={3000}
+			married={false}
+			points={[99, 33.3, 22.2]}
+			address={{ street: '123 Main Street', city: 'New York' }}
+			greet={function () {
+				alert('hello');
+			}}
+		/>
+		<UserCard
+			name="Joe Mcmillan"
+			amount={1000}
+			married={true}
+			points={[100, 20]}
+			address={{ street: 'av some 123', city: 'New York' }}
+		/>
 	</>
 );
