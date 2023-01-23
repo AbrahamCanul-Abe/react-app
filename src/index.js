@@ -7,8 +7,9 @@ import { TaskCard } from './Task';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const handleChange = (e) => {
-	console.log(e.target.value + '...');
+const handleSubmit = (e) => {
+	e.preventDefault();
+	alert('enviado');
 };
 
 root.render(
@@ -17,6 +18,9 @@ root.render(
 
 		<Button text="saludar" />
 
-		<input onChange={handleChange}></input>
+		<form onSubmit={handleSubmit}>
+			<h1>Registro de usuario</h1>
+			<input type="submit"></input>
+		</form>
 	</>
 );
