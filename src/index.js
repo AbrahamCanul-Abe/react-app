@@ -4,6 +4,7 @@ import { Greeting, UserCard } from './Greeting';
 import Product, { Navbar } from './Product';
 import { Button } from './Button';
 import { TaskCard } from './Task';
+import { Posts } from './Posts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,13 +15,6 @@ const handleSubmit = (e) => {
 
 root.render(
 	<>
-		<TaskCard ready={true} />
-
-		<Button text="saludar" />
-
-		<form onSubmit={handleSubmit}>
-			<h1>Registro de usuario</h1>
-			<input type="submit"></input>
-		</form>
+		<Posts />
 	</>
 );
