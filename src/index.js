@@ -8,13 +8,33 @@ import { Posts } from './Posts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const handleSubmit = (e) => {
-	e.preventDefault();
-	alert('enviado');
-};
+const user = [
+	{
+		id: 1,
+		name: 'Ryan Ray',
+		image: 'https://robohash.org/user1',
+	},
+	{
+		id: 2,
+		name: 'John Smith',
+		image: 'https://robohash.org/user2',
+	},
+	{
+		id: 3,
+		name: 'Marcos',
+		image: 'https://robohash.org/user3',
+	},
+];
 
 root.render(
 	<>
-		<Posts />
+		{user.map((user, i) => {
+			return (
+				<div key={i}>
+					<h1>{user.name}</h1>
+					<img src={user.image} />
+				</div>
+			);
+		})}
 	</>
 );
